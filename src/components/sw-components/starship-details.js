@@ -1,6 +1,6 @@
-import React from "react";
-import ItemDetails, { Record } from "../item-details";
-import { withSwapiService } from "../hoc-helpers";
+import React from 'react';
+import ItemDetails, { Record } from '../item-details';
+import { withSwapiService } from '../hoc-helpers';
 
 const StarshipDetails = props => {
   return (
@@ -15,7 +15,7 @@ const StarshipDetails = props => {
 const mapMethodsToProps = swapiService => {
   return {
     getData: swapiService.getStarship,
-    getImageUrl: swapiService.getStarshipImage
+    getImageUrl: swapiService.getStarshipImage,
   };
 };
 

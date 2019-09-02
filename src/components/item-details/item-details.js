@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import ErrorButton from "../error-button/error-button";
+import ErrorButton from '../error-button/error-button';
 
-import "./item-details.css";
+import './item-details.css';
 
 const Record = ({ item, field, label }) => {
   return (
@@ -18,7 +18,7 @@ export { Record };
 export default class ItemDetails extends Component {
   state = {
     item: null,
-    image: null
+    image: null,
   };
 
   componentDidMount() {
@@ -44,7 +44,7 @@ export default class ItemDetails extends Component {
     getData(itemId).then(item => {
       this.setState({
         item,
-        image: getImageUrl(item)
+        image: getImageUrl(item),
       });
     });
   }

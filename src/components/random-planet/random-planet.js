@@ -1,26 +1,26 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-import Spinner from "../spinner";
-import ErrorIndicator from "../error-indicator";
-import SwapiService from "../../services/swapi-service";
+import Spinner from '../spinner';
+import ErrorIndicator from '../error-indicator';
+import SwapiService from '../../services/swapi-service';
 
-import "./random-planet.css";
+import './random-planet.css';
 
 export default class RandomPlanet extends Component {
   static defaultProps = {
-    updateInterval: 10000
+    updateInterval: 10000,
   };
 
   static propTypes = {
-    updateInterval: PropTypes.number
+    updateInterval: PropTypes.number,
   };
 
   swapiService = new SwapiService();
 
   state = {
     planet: {},
-    loading: true
+    loading: true,
   };
 
   componentDidMount() {
@@ -37,14 +37,14 @@ export default class RandomPlanet extends Component {
     this.setState({
       planet,
       loading: false,
-      error: false
+      error: false,
     });
   };
 
   onError = err => {
     this.setState({
       error: true,
-      loading: false
+      loading: false,
     });
   };
 

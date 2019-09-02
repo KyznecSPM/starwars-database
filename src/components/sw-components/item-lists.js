@@ -1,11 +1,11 @@
-import React from "react";
-import ItemList from "../item-list";
+import React from 'react';
+import ItemList from '../item-list';
 import {
   withData,
   withSwapiService,
   withChildFunction,
-  compose
-} from "../hoc-helpers";
+  compose,
+} from '../hoc-helpers';
 
 const renderName = ({ name }) => <span>{name}</span>;
 
@@ -17,19 +17,19 @@ const renderModelAndName = ({ model, name }) => (
 
 const mapPersonMethodsToProps = swapiService => {
   return {
-    getData: swapiService.getAllPeople
+    getData: swapiService.getAllPeople,
   };
 };
 
 const mapPlanetMethodsToProps = swapiService => {
   return {
-    getData: swapiService.getAllPlanets
+    getData: swapiService.getAllPlanets,
   };
 };
 
 const mapStarshipMethodsToProps = swapiService => {
   return {
-    getData: swapiService.getAllStarships
+    getData: swapiService.getAllStarships,
   };
 };
 
